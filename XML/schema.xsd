@@ -1,0 +1,32 @@
+<!-- I pledge my honor that all parts of this project were done by me alone and without collaboration with anybody else or using code from external sources.
+ToDB Project 3
+File Name: schema.xsd
+Author: Rajat R Hande (112674168)
+Brief Description: The schema.xsd file forms the outline for the data in db.xml file-->
+
+<woco:schema xmlns:woco="http://www.w3.org/2001/XMLSchema" targetNamespace="http://wocoTest.com/mainSchema" 
+    xmlns:company="http://wocoTest.com/personType" 
+    xmlns:person="http://wocoTest.com/companyType" elementFormDefault="qualified">
+
+    <woco:import schemaLocation="company.xsd" namespace="http://NamespaceTest.com/personType" />
+    <woco:import schemaLocation="person.xsd" namespace="http://NamespaceTest.com/companyType" />
+    <!-- Create elements using company and person 'type' attribute.  object-oriented design is used -->
+    <woco:element name="entries">
+        <woco:complexType>
+            <woco:sequence>
+                <woco:element name="company" type="company:companyType"/>
+                <woco:element name="person" type="person:personType"/>
+            </woco:sequence>
+        </woco:complexType>
+        <woco:key name="personId">
+            <woco:selector xpath="person/commonality" />
+            <woco:field xpath="id" />
+        </woco:key>
+        <woco:key name="companyId">
+            <woco:selector xpath="company/commonality" />
+            <woco:field xpath="id" />
+        </woco:key>
+    </woco:element>
+</woco:schema>
+
+

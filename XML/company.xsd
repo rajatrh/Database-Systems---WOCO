@@ -1,0 +1,53 @@
+<!-- I pledge my honor that all parts of this project were done by me alone and without collaboration with anybody else or using code from external sources.
+ToDB Project 3
+File Name: company.xsd
+Author: Rajat R Hande (112674168)
+Brief Description: The company.xsd file forms the outline for company Type-->
+
+<woco:schema targetNamespace="http://wocoTest.com/companyType" 
+    xmlns:generic="http://wocoTest.com/genericType" 
+    xmlns:woco="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <woco:import schemaLocation="generic.xsd" namespace="http://NamespaceTest.com/genericType" />
+
+    <!-- Complex Types Company -->
+    <woco:complexType name="companyType">
+        <woco:element name="commonality" type="generic:genericType"/>
+        <woco:element name="shares" type="woco:int" />
+        <woco:element name="shareprice" type="woco:int"/>
+        <woco:element name="board" type="companyBoard">
+        </woco:element>
+        <woco:element name="industries">
+            <woco:complexType>
+                <woco:sequence>
+                    <woco:element name="industry" type="woco:string" maxOccurs="unbounded"/>
+                </woco:sequence>
+            </woco:complexType>
+        </woco:element>
+    </woco:complexType>
+
+    <!-- Complex Types Company Board -->
+    <woco:complexType name="companyBoard">
+    <woco:element name="commonality" type="generic:genericType"/>
+        <woco:sequence>
+            <woco:element name="member" maxOccurs="unbounded">
+                <woco:complexType>
+                    <woco:sequence>
+                        <woco:element name="pid" type="woco:string"/>
+                    </woco:sequence>
+                </woco:complexType>
+            </woco:element>
+        </woco:sequence>
+        <!-- Key Ref from board/member to pid -->
+        <woco:keyref name="personOnBoard" refer="personId">
+            <woco:selector xpath="company/board/member" />
+            <woco:field xpath="pid" />
+        </woco:keyref>
+    </woco:complexType>
+
+    <!-- Complex Types Person -->
+    <woco:complexType name="personType">
+        <woco:element name="commonality" type="generic:genericType"/>
+    </woco:complexType>
+
+</woco:schema>

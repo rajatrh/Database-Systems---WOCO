@@ -1,0 +1,16 @@
+<!-- I pledge my honor that all parts of this project were done by me alone and without collaboration with anybody else or using code from external sources.
+ToDB Project 3
+File Name: person.xsd
+Author: Rajat R Hande (112674168)
+Brief Description: The person.xsd file forms the outline for person Type-->
+
+<woco:schema targetNamespace="http://wocoTest.com/personType" 
+    xmlns:generic="http://wocoTest.com/genericType" 
+    xmlns:woco="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+    <woco:import schemaLocation="generic.xsd" namespace="http://NamespaceTest.com/genericType" />
+       <!-- Complex Types Person -->
+    <woco:complexType name="personType">
+        <woco:element name="commonality" type="generic:genericType"/>
+    </woco:complexType>
+</woco:schema>

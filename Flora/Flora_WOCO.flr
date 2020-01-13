@@ -1,0 +1,250 @@
+/*
+Name: Rajat R Hande SBU ID: 112684167 Email: rajat.hande@stonybrook.edu
+
+I pledge my honor that all parts of this project were done by me individually and without collaboration with anybody else. I did not use any external code that is directly related to this assignment.
+*/
+
+company(c1, QUE, 150000, 30).
+companyBoard(c1, p3).
+companyBoard(c1, p1).
+companyBoard(c1, p4).
+companyOwns(c1, c2, 10000).
+companyOwns(c1, c4, 20000).
+companyOwns(c1, c8, 30000).
+industry(i1, Software).
+industry(i2, Accounting).
+industryBelong(c1, i1).
+industryBelong(c1, i2).
+entity(c1, c2, 10000).
+entity(c1, c4, 20000).
+entity(c1, c8, 30000).
+
+company(c2, RHC, 250000, 20).
+companyBoard(c2, p1).
+companyBoard(c2, p2).
+companyBoard(c2, p5).
+industryBelong(c2, i2).
+
+company(c3, Alf, 10000000, 700).
+companyBoard(c3, p6).
+companyBoard(c3, p7).
+companyBoard(c3, p1).
+companyOwns(c3, c9, -100000).
+companyOwns(c3, c4, 400000).
+companyOwns(c3, c8, 100000).
+industry(i3, Automotive).
+industryBelong(c3, i1).
+industryBelong(c3, i3).
+entity(c3, c9, -100000).
+entity(c3, c4, 400000).
+entity(c3, c8, 100000).
+
+company(c4, Elgog, 1000000, 400).
+companyBoard(c4, p6).
+companyBoard(c4, p7).
+companyBoard(c4, p5).
+companyOwns(c4, c6, 5000).
+industry(i4, Search).
+industryBelong(c4, i1).
+industryBelong(c4, i4).
+entity(c4, c6, 5000).
+
+company(c5, Tfos, 10000000, 300).
+companyBoard(c5, p2).
+companyBoard(c5, p5).
+companyBoard(c5, p4).
+companyOwns(c5, c6, 30000).
+companyOwns(c5, c7, 50000).
+companyOwns(c5, c1, 200000).
+industry(i5, Hardware).
+industryBelong(c5, i1).
+industryBelong(c5, i5).
+entity(c5, c6, 30000).
+entity(c5, c7, 50000).
+entity(c5, c1, 200000).
+
+company(c6, Ohay, 180000, 50).
+companyBoard(c6, p2).
+companyBoard(c6, p4).
+companyBoard(c6, p8).
+industryBelong(c6, i4).
+
+company(c7, Gnow, 150000, 300).
+companyBoard(c7, p2).
+companyBoard(c7, p3).
+companyBoard(c7, p4).
+industryBelong(c7, i4).
+
+company(c8, Elpa, 9000000, 300).
+companyBoard(c8, p2).
+companyBoard(c8, p3).
+companyBoard(c8, p8).
+companyOwns(c8, c5, 20000).
+companyOwns(c8, c4, 30000).
+industryBelong(c8, i1).
+industryBelong(c8, i2).
+entity(c8, c5, 20000).
+entity(c8, c4, 30000).
+
+company(c9, Ydex, 5000000, 100).
+companyBoard(c9, p6).
+companyBoard(c9, p3).
+companyBoard(c9, p8).
+industryBelong(c9, i1).
+industryBelong(c9, i4).
+
+person(p1, 'Bill Doe').
+personOwns(p1, c5, 30000).
+personOwns(p1, c8, 100000).
+entity(p1, c5, 30000).
+entity(p1, c8, 100000).
+
+person(p2, 'Bill Seth').
+personOwns(p2, c7, 40000).
+personOwns(p2, c4, 20000).
+entity(p2, c7, 40000).
+entity(p2, c4, 20000).
+
+person(p3, 'John Smyth').
+personOwns(p3, c1, 20000).
+personOwns(p3, c2, 20000).
+personOwns(p3, c5, 800000).
+entity(p3, c1, 20000).
+entity(p3, c2, 20000).
+entity(p3, c5, 800000).
+
+person(p4, 'Anne Smyle').
+personOwns(p4, c2, 30000).
+personOwns(p4, c5, 40000).
+personOwns(p4, c3, 500000).
+entity(p4, c2, 30000).
+entity(p4, c5, 40000).
+entity(p4, c3, 500000).
+
+person(p5, 'Steve Lamp').
+personOwns(p5, c8, 90000).
+personOwns(p5, c1, 50000).
+personOwns(p5, c6, 50000).
+personOwns(p5, c2, 70000).
+entity(p5, c8, 90000).
+entity(p5, c1, 50000).
+entity(p5, c6, 50000).
+entity(p5, c2, 70000).
+
+person(p6, 'May Serge').
+personOwns(p6, c8, -10000).
+personOwns(p6, c9, -40000).
+personOwns(p6, c3, 500000).
+personOwns(p6, c2, 40000).
+entity(p6, c8, -10000).
+entity(p6, c9, -40000).
+entity(p6, c3, 500000).
+entity(p6, c2, 40000).
+
+person(p7, 'Bill Public').
+personOwns(p7, c7, 80000).
+personOwns(p7, c4, 30000).
+personOwns(p7, c1, 30000).
+personOwns(p7, c5, 300000).
+personOwns(p7, c2, -9000).
+entity(p7, c7, 80000).
+entity(p7, c4, 30000).
+entity(p7, c1, 30000).
+entity(p7, c5, 300000).
+entity(p7, c2, -9000).
+
+person(p8, 'Muck Lain').
+personOwns(p8, c2, 60000).
+personOwns(p8, c6, -40000).
+personOwns(p8, c9, -80000).
+personOwns(p8, c8, 30000).
+entity(p8, c2, 60000).
+entity(p8, c6, -40000).
+entity(p8, c9, -80000).
+entity(p8, c8, 30000).
+
+/*
+  Find all companies that are (partially) owned by one of their board members.
+*/
+Q1(?Name) :-
+        companyBoard(?Id,?Person),
+        personOwns(?Person,?Id,?Shares),
+        ?Shares > 0,
+        company(?Id,?Name, ?, ?).
+
+/*
+  Find the net worth for every person in the database.
+  The net worth of a person is ⌃isharesi ⇤ share pricei,
+  where the sum is taken over all the companies directly owned by that person,
+  sharesi is the number of the shares in company i that the person owns,
+  and share pricei is the price of a share in company i.
+*/
+
+Q2(?Person, ?NetWorth) :-
+        person(?PersonId, ?Person),
+                ?NetWorth = sum{?Worth |
+                        company(?Id,?,?,?Price),
+                        personOwns(?PersonId,?Id,?Shares),
+                        ?Shares > 0,
+                        ?Worth \is ?Shares * ?Price}.
+
+/*
+For each company, find the board member that owns the most shares of that company among
+all the board members of that company. This query also involves aggregates.
+*/
+
+Q3(?Company, ?MaxPerson) :-
+        company(?CompanyId,?Company,?,?),
+        person(?PersonId,?MaxPerson),
+        ?_ = max{?Worth |
+            companyBoard(?CompanyId, ?PersonId),
+            personOwns(?PersonId,?CompanyId,?Shares),
+            ?Shares > 0,
+            ?Worth \is ?Shares
+            }.
+
+/*
+Q4
+*/
+
+Q4(?Company1,?Company2) :-
+        company(?c1,?Company1,?,?),
+        company(?c2,?Company2,?,?),
+        ?c1 != ?c2,
+        exists(?i)^(industryBelong(?c1,?i),industryBelong(?c2,?i)),
+        forall(?p2, ?c, ?s2)^(
+                exists(?p1, ?s1)^(
+                companyBoard(?c2,?p2),personOwns(?p2,?c,?s2) ~~>
+                companyBoard(?c1,?p1),personOwns(?p1, ?c, ?s1),?s1>=?s2
+                )).
+
+/*
+Q5(?Name1, ?Name2, ?Percentage) :-
+        indirectly_endorsed(?Name1,?Name2),
+
+directly_owned(?Entity1,?Entity2,?Percentage) :-
+        entity(?Entity1,?Entity),
+        entity(?Entity1,?Entity),
+        endorse(?Id1,?Id2,?).
+indirectly_owned(?e1,?e2) :- directly_owned(?e1,?e1).
+indirectly_owned(?e1,?e2) :-
+        directly_owned(?e1,?e2),
+        indirectly_owned(?e1,?e2).
+*/
+
+?- writeln('--- Query 1: All companies that are (partially) owned by one of their board members: ---')@\io,
+        Q1(?Name).
+
+?- writeln('--- Query 2: NetWorth ---')@\io,
+        Q2(?Person, ?NetWorth).
+
+?- writeln('--- Query 3: Max Shareholder ---')@\io,
+        Q3(?Company, ?MaxPerson).
+
+?- writeln('--- Query 4: Common Industry and domination---')@\io,
+        Q4(?Company1, ?Company2).
+
+/*
+?- writeln('--- Query 5: Ownership%---')@\io,
+        Q5(?Name1, ?Name2, ?Percentage).
+*/

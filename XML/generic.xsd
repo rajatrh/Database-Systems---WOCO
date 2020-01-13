@@ -1,0 +1,28 @@
+<!-- I pledge my honor that all parts of this project were done by me alone and without collaboration with anybody else or using code from external sources.
+ToDB Project 3
+File Name: generic.xsd
+Author: Rajat R Hande (112674168)
+Brief Description: The generic.xsd file forms the outline for general entity-->
+
+<woco:schema targetNamespace="http://wocoTest.com/genericType" 
+    xmlns:woco="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+    <!-- Common component for both Person and Company -->
+    <woco:complexType name="genericType">
+        <woco:element name="id" type="woco:string"/>
+        <woco:element name="name" type="woco:string"/>
+        <woco:element name="ownsCompany">
+            <woco:complexType>
+                <woco:sequence>
+                    <woco:element name="ownedCompany">
+                        <woco:complexType>
+                            <woco:sequence>
+                                <woco:element name="cid" type="woco:string"/>
+                                <woco:element name= "shares" type="woco:integer"/>
+                            </woco:sequence>
+                        </woco:complexType>
+                    </woco:element>
+                </woco:sequence>
+            </woco:complexType>
+        </woco:element>
+    </woco:complexType>
+</woco:schema>
